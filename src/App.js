@@ -4,7 +4,7 @@ import './App.css'
 
 function AlertMessage() {
   return <div className="alert alert-primary h5 text-primary">
-    This is Alert message!
+    This is Alrt message!
   </div>
 }
 function CardMessage() {
