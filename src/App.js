@@ -1,37 +1,20 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
-class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      msg:'count start!',
-      counter:0,
-    }
-    this.doAction = this.doAction.bind(this)
-  }
+function App(){
+  const [message] = useState("〜フックスのお勉強〜")
 
-  doAction(event){
-    this.setState({
-      counter: this.state.counter + 1,
-      msg: '*** count: ' + this.state.counter + ' *** '
-    })
-  }
-    
-  render(){
-    return  <div>
-      <h1 className="bg-primary text-white display-4">React</h1>  
+  return(
+    <div>
+      <h1 className="bg-primary text-white display-4 ">React</h1>
       <div className="container">
-        <p className="subtitle">Count number.</p>
+        <h4 className="my-3">Hooks sample</h4>
         <div className="alert alert-primary text-center">
-          <p className="h5 mb-4">{this.state.msg}</p>
-          <button className="btn btn-primary"
-          onClick={this.doAction}>
-          Click</button>
+          <p className="h5">{message}.</p>
         </div>
       </div>
-    </div>
-  }
+    </div>    
+  )
 }
 
 export default App
