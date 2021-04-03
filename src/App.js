@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 
 function App(){
-  const [message] = useState("〜フックスのお勉強〜")
+  const [message] = useState("-フックスのお勉強-")
 
   return(
     <div>
