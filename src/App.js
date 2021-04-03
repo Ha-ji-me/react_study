@@ -1,47 +1,29 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
-class App extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      counter:0, 
-      msg:'count start!',
-      flg:true,
-    }
-    this.doAction = this.doAction.bind(this)
-  }
 
-  doAction(e){
-    this.setState({
-      counter: this.state.counter + 1,
-      msg: this.state.counter,
-      flg: !this.state.flg
-    })
-  }
+function AlertMessage() {
+  return <div className="alert alert-primary h5 text-primary">
+    This is Alert message!
+  </div>
+}
+function CardMessage() {
+  return <div className="card p-3 h5 border-primary text-center">
+    This is Card Message!
+  </div>
+}
 
-  render(){
-    return  <div>
-      <h1 className="bg-primary text-white display-4">React</h1>  
+function App() {
+  return (
+    <div>
+      <h1 className="bg-primary text-white display-4 ">React</h1>
       <div className="container">
-        <p className="subtitle">Count number</p>
-        {this.state.flg ? 
-          <div className="alert alert-primary text-right">
-            <p className="h5">count: {this.state.msg}</p>
-          </div>
-        :
-          <div className="alert alert-warning  text-left">
-            <p className="h5">{this.state.msg}です。</p>
-          </div>
-        }
-        <div className="text-center">
-          <button className="btn btn-primary" 
-            onClick={this.doAction}>
-            Click</button>
-        </div>
+        <h4 className="my-3">Hooks sample</h4>
+        <AlertMessage />
+        <CardMessage />
       </div>
     </div>
-  }
+  )
 }
 
 export default App
