@@ -9,7 +9,7 @@ ReactDOM.render(
     <App /> 
   </React.StrictMode>,
   document.getElementById('root')
-)
+);
 
 
 // If you wantt measuring peormance in your app, pa
