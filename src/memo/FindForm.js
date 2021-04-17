@@ -7,11 +7,13 @@ function FindForm (props) {
   const [message, setMessage] = useState('')
   const [mode, setMode] = usePersist('mode', 'find')
 
-  const doChange = (e)=> {
+  const doChange = e => {
+    e.preventDefault()
     setMessage(e.target.value)
   }
 
-  const doAction = (e)=> {
+  const doAction = e => {
+    e.preventDefault()
     if (message == '') {
       setMode('default')
       return
